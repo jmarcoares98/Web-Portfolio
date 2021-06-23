@@ -1,0 +1,191 @@
+body {
+    background-color: LavenderBlush;
+    color: Teal;
+    font-size: 100%;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    line-height: 1.5;
+    margin: 0;
+    padding: 1rem;
+  }
+  
+  *, ::after, ::before {
+    box-sizing: border-box;
+  }
+  
+  
+  /* grid styles */
+  
+  .container {
+    --columns: 12; /* number of columns in the grid system */
+    
+    max-width: 100%;
+    color:black;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .column {
+    --width: 0; /* default value */
+    
+    background-color: white;
+    border: #f8f8ff 2px solid;
+    border-radius: 8px;
+    padding: 16px;
+    flex-basis: calc(var(--width) / var(--columns) * 100%);
+  }
+  
+  
+  /* sections */
+  
+  .content {
+    --width: 12;
+    height: 30rem;
+  }
+  
+  *, ::after, ::before {
+    box-sizing: border-box;
+  }
+  
+  
+  /* component styles */
+  
+  .post {
+    background-color: white;
+    max-width: 480px;
+    border-radius: 16px;
+    padding: .5rem 1rem;
+    margin: .5rem auto 1rem;
+  }
+  
+  .heading {
+    font-size: 2rem;
+    margin: 0;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 3 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+  }
+
+ /* The typing effect by Geoff Graham */
+
+  /* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+  /* component styles for larger screens */
+  
+  @media (min-width: 576px) {
+    .post {
+      padding: 1rem 2rem;
+      margin: 1rem auto 2rem;
+    }
+    
+    .heading {
+      font-size: 3rem;
+    }
+  }
+
+  img { 
+      border-radius: 10%;
+      width: 50%;
+      height: 50%;
+      margin-left: 25%;
+      margin-right: auto;
+  }
+
+ul {
+    position: relative;
+    display: flex;
+    flex: 1 1 auto;
+    margin: 0;
+    padding: 0 30px;
+    list-style-type: none;
+  }
+  ul li:not(:last-child) {
+    margin-right: 40px;
+  }
+  ul li {
+    border: 2px solid transparent;
+    border-radius: 5px;
+    padding: 10px;
+    transition: background 0.2s;
+  }
+  ul li a {
+    color: #778899;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  
+  ul li:hover {
+    background: #ffebcd;
+    border: 2px solid #ffe4c4;
+    border-right: 2px solid #deb887;
+    border-bottom: 2px solid #deb887;
+  }
+  
+  footer {
+    position: relative;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    border: 5px solid #ebecf1;
+    border-radius: 10px;
+    animation: slide-from-bottom 1s ease-out;
+  }
+  .fa {
+    padding: 5px;
+    font-size: 25px;
+    width: 50%;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+  }
+  
+  .fa:hover {
+      opacity: 0.7;
+  }
+
+  @keyframes slide-from-bottom {
+    0% {
+      bottom: -50px;
+   }
+    40% {
+      bottom: 5px;
+   }
+    70% {
+      bottom: 0px;
+   }
+    100% {
+      bottom: -5px;
+   }
+  }
+
+  @keyframes slide-from-top {
+    0% {
+      top: -50px;
+   }
+    40% {
+      top: 20px;
+   }
+    70% {
+      top: 10px;
+   }
+    100% {
+      top: 15px;
+   }
+  }
