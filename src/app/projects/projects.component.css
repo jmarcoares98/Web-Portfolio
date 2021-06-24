@@ -1,0 +1,115 @@
+/* global styles */
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+  
+.container {
+    --columns: 12; /* number of columns in the grid system */
+  
+    max-width: 100%;
+    color:black;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0 auto;
+    margin-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container2 {
+    --columns: 12; /* number of columns in the grid system */
+  
+    max-width: 100%;
+    color:black;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0 auto;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column {
+    --width: 0; /* default value */
+  
+    background-color: beige;
+    border: #f8f8ff 2px solid;
+    border-radius: 8px;
+    padding: 16px;
+    flex-basis: calc(var(--width) / var(--columns) * 100%);
+}
+  
+  
+/* sections */
+.header {
+    --width: 12;
+    height: 6rem;
+}
+
+.content{
+    --width: 3;
+    height: 30rem;
+}
+  
+.content2 {
+    --width: 12;
+    height: 35rem;
+}
+
+iframe{
+    display: block;
+    max-width: 900px;
+    max-height: 600px;
+    border-radius: 16px;
+    padding: .5rem 1rem;
+    margin: .5rem auto 1rem;
+}
+
+@media only screen and (max-width: 940px) {
+    .content {
+      --width: 6;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .content {
+        --width: 12;
+    }
+} 
+
+/* content */
+.post {
+    background-color: white;
+    max-width: 480px;
+    border-radius: 16px;
+    padding: .5rem 1rem;
+    margin: .5rem auto 1rem;
+}
+
+.heading {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.heading-project {
+    font-size: 2rem;
+    margin: 0;
+}
+
+hr.new4 {
+    border: 2px solid black;
+}
+
+
+.fa {
+    color: black;
+    position: relative;
+    display: flex;
+    padding: 5px;
+    font-size: 150px;
+    text-align: center;
+    text-decoration: none;
+    margin: .5rem auto 1rem;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
