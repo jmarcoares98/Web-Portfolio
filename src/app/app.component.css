@@ -27,6 +27,7 @@ ul li {
 }
 ul li a {
   color: #778899;
+  padding: 10px;
   text-decoration: none;
   text-transform: uppercase;
   transition: color 0.2s;
