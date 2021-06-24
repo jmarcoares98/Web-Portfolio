@@ -1,0 +1,226 @@
+/* global styles */
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+
+/* grid styles */
+
+.container {
+  --columns: 12; /* number of columns in the grid system */
+
+  max-width: 100%;
+  color:black;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin: 0 auto;
+  margin-top: 80px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container2 {
+  --columns: 12; /* number of columns in the grid system */
+
+  max-width: 100%;
+  color:black;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column {
+  --width: 0; /* default value */
+
+  background-color: beige;
+  border: #f8f8ff 2px solid;
+  border-radius: 8px;
+  padding: 16px;
+  flex-basis: calc(var(--width) / var(--columns) * 100%);
+}
+
+
+/* sections */
+
+.content {
+  --width: 8;
+  height: 25rem;
+}
+
+.content2 {
+  --width: 7;
+  height: 25rem;
+}
+
+.content3 {
+  --width: 12;
+  height: 25rem;
+}
+
+.sidebar {
+  --width: 4;
+  display: none;
+}
+
+.sidebar2 {
+  --width: 5;
+  display: none;
+}
+
+/* content */
+.post {
+  background-color: white;
+  max-width: 480px;
+  border-radius: 16px;
+  padding: .5rem 1rem;
+  margin: .5rem auto 1rem;
+}
+
+.heading {
+  font-size: 4rem;
+  margin: 0;
+}
+
+hr.new4 {
+  border: 2px solid black;
+}
+
+.paragraph{
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.me-img { 
+  display: none;
+  border-radius: 10%;
+  width: 260px;
+  height: 360px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.school-img{
+  display: none;
+  border-radius: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 500px;
+  max-height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (min-width: 1024px) {
+  .me-img {
+    display: block;
+  }
+
+  .sidebar {
+    display: block;
+  }
+
+  .sidebar2 {
+    display: block;
+  }
+
+  .school-img {
+      display: block;
+    }
+}
+
+@media only screen and (min-width: 951px) {
+  .me-img {
+    display: block;
+  }
+
+  .sidebar {
+    display: block;
+  }
+
+  .sidebar2 {
+    display: block;
+  }
+
+  .school-img {
+      display: block;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .content {
+    --width: 12;
+  }
+
+  .content2 {
+    --width: 12;
+  }
+}
+
+ul {
+  position: relative;
+  display: flex;
+  flex: 1 1 auto;
+  margin: 0;
+  padding: 0 30px;
+  list-style-type: none;
+}
+ul li:not(:last-child) {
+  margin-right: 40px;
+}
+ul li {
+  border: 2px solid transparent;
+  border-radius: 5px;
+  padding: 10px;
+  transition: background 0.2s;
+}
+ul li a {
+  color: #778899;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+ul li:hover {
+  background: #ffebcd;
+  border: 2px solid #ffe4c4;
+  border-right: 2px solid #deb887;
+  border-bottom: 2px solid #deb887;
+}
+
+footer {
+  position: relative;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
+  border: 5px solid #ebecf1;
+  border-radius: 10px;
+  animation: slide-from-bottom 1s ease-out;
+}
+.fa {
+  padding: 5px;
+  font-size: 25px;
+  width: 50%;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+@keyframes slide-from-bottom {
+  0% {
+    bottom: -50px;
+  }
+  40% {
+    bottom: 5px;
+  }
+  70% {
+    bottom: 0px;
+  }
+  100% {
+    bottom: -5px;
+  }
+}
