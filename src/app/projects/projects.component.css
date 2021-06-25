@@ -75,6 +75,12 @@ iframe{
     }
 } 
 
+@media only screen and (max-width: 500px) {
+    .content2{
+        height: 25rem;
+    }
+}
+
 /* content */
 .post {
     background-color: white;

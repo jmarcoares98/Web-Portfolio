@@ -40,6 +40,15 @@ ul li:hover {
   border-bottom: 2px solid #deb887;
 }
 
+@media (max-width: 500px) {
+  ul li{
+    padding: 0px;
+  }
+  ul li a{
+    padding: 0px;
+  }
+}
+
 @keyframes slide-from-top {
   0% {
     top: -50px;

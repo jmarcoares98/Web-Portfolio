@@ -35,10 +35,6 @@
     height: 27rem;
   }
   
-  *, ::after, ::before {
-    box-sizing: border-box;
-  }
-  
   
   /* component styles */
   
@@ -52,7 +48,12 @@
   
   .paragraph{
     font-size: 1.1rem;
+    text-align: center;
     margin: 0;
+  }
+
+  hr.new4 {
+    border: 2px solid black;
   }
 
   .heading {

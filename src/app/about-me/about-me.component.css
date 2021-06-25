@@ -81,6 +81,11 @@
   margin: 0;
 }
 
+.heading3 {
+  font-size: 4rem;
+  margin: 0;
+}
+
 hr.new4 {
   border: 2px solid black;
 }
@@ -153,6 +158,25 @@ hr.new4 {
 
   .content2 {
     --width: 12;
+  }
+
+  .content3 {
+    --width: 12;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .content {
+    height: 35rem;
+  }
+
+  .content3 {
+    height: 35rem;
+  }
+
+  .heading3 {
+    font-size: 3rem;
+    margin: 0;
   }
 }
 
